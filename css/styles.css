@@ -116,6 +116,7 @@ button {
 
 /* #region Nav section */
 header {
+  padding: 16px 0;
   border: 1px solid #e7e9fc;
 }
 
@@ -129,7 +130,8 @@ header .container {
 
 @media only screen and (min-width: 1158px) {
   header .container {
-    padding: 0px 156px;
+    min-width: auto;
+    max-width: 1168px;
   }
 }
 
@@ -173,7 +175,7 @@ nav {
 
 .nav-list li::after {
   display: block;
-  content: "";
+  content: '';
   width: 100%;
   border-radius: 2px;
   height: 4px;
@@ -206,6 +208,7 @@ nav {
 }
 @media only screen and (min-width: 768px) {
   .address {
+    font-style: normal;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -251,8 +254,6 @@ nav {
 @media only screen and (max-width: 767px) {
   .btn-mobile-menu {
     background-color: transparent;
-    /* margin-left: 100px; */
-    padding: 24px 16px;
     border: none;
   }
   .btn-mobile-menu-svg {
@@ -362,23 +363,21 @@ nav {
 }
 
 .mobile-menu-address-a {
-  display: block;
-  color: var(--IRIS, #4d5ae5);
+  color: #434455;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+}
+.mobile-menu-address-a-tel {
+  color: #4d5ae5;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0.72px;
   text-transform: capitalize;
-  margin-bottom: 40px;
-}
-.mobile-menu-address-a-tel {
-  color: var(--SLATE, #434455);
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.4px;
 }
 
 .menu-container .footer-social-list {
@@ -467,9 +466,18 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1440px;
+  padding: 0 72px;
 }
-
+@media only screen and (min-width: 768px) {
+  .hero .container {
+    padding: 0 112px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero .container {
+    max-width: 1440px;
+  }
+}
 .hero-title {
   font-size: 36px;
   line-height: 107%;
@@ -502,7 +510,6 @@ nav {
   background-color: rgb(var(--iris));
   color: rgb(var(--white));
   margin: auto;
-  margin-top: 48px;
   border: none;
 }
 .hero-btn:hover,
@@ -561,9 +568,13 @@ nav {
     margin-bottom: 8px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .features-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+}
 
 .features-p {
-  margin-bottom: 72px;
   letter-spacing: 0.32px;
 }
 
@@ -572,7 +583,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 24px;
+    gap: 72px 24px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -601,6 +612,17 @@ nav {
     text-align: left;
   }
 }
+@media only screen and (min-width: 158px) {
+  .features-title {
+    color: rgb(var(--navy-blue));
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+  }
+}
+
 /* #endregion */
 
 /* #region We are section */
@@ -635,7 +657,14 @@ nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 24xpx;
+}
+
+@media only screen and (min-width: 1158px) {
+  .we-are ul {
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0px 24px;
+  }
 }
 
 /* #endregion */
@@ -681,20 +710,22 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 72px 0px;
+  gap: 72px 24px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1158px) {
   .team ul {
-    gap: 64px 24px;
+    flex-wrap: nowrap;
   }
 }
+
 .team li {
   background-color: rgb(var(--white));
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .team-title {
   font-size: 36px;
   line-height: 111%;
@@ -764,13 +795,12 @@ footer .container {
     flex-direction: row;
     align-items: flex-start;
     justify-content: left;
-    padding: 0 108px;
+    max-width: 584px;
   }
 }
 @media only screen and (min-width: 1158px) {
   footer .container {
-    padding: 0 120px;
-    min-width: 1300px;
+    max-width: 1158px;
     justify-content: space-between;
   }
 }
@@ -798,10 +828,10 @@ footer .container {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  margin-bottom: 72px;
 }
 
 .footer-desc {
+  margin-bottom: 72px;
   margin-right: 24px;
 }
 
@@ -1053,7 +1083,11 @@ footer .container {
   align-items: center;
   gap: 72px 16px;
 }
-
+@media only screen and (min-width: 1158px) {
+  .customers-list {
+    flex-wrap: nowrap;
+  }
+}
 @media only screen and (min-width: 768px) {
   .customers-list {
     gap: 72px 24px;
@@ -1113,8 +1147,8 @@ footer .container {
   transform: translateY(-50%) translateX(-50%);
   top: 50%;
   left: 50%;
-  width: 408px;
-  min-height: 584px;
+  min-width: 320px;
+  max-width: 408px;
   border-radius: 4px;
   background: var(--DAIRY, #fcfcfc);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
